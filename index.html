@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script scr="jquery-3.2.1.js"></script>
+	<script scr="peer.js"></script>
+</head>
+<body>
+	<div>
+		<p>ID:</p>
+		<p id="myId"></p>
+	</div>
+	<video id="localStream"></video>
+	<video id="friendStream"></video>
+	<script scr="socket.io.js"></script>
+	<script>
+    // No API key required when not using cloud server
+    var peer = new Peer({key : 'peerjs',host: 'localhost', port: 9000,secure : true});
+    const socket=io();
+		function openStream() {
+		    const config = { audio: false, video: true };
+		    return navigator.mediaDevices.getUserMedia(config);
+		};
+
+		function playStream(idVideoTag, stream) {
+		    const video = document.getElementById(idVideoTag);
+		    video.srcObject = stream;
+		    video.play();
+		};
+		//openStream().then(stream => playStream('localStream', stream));
+		
+	</script>
+</body>
+</html>

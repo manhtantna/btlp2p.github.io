@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title><%= title%></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="./../../js/jquery-3.2.1.js"></script>
+	<script src="./../../js/peer.js"></script>
+	<script src="./../../js/socket.io.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="table-responsive">
+					<table class="table-hover table-bordered" id="tblUser">
+						<tr>
+							<td class="text-danger">online</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="col-sm-4"><video id="localStream" width="300" ></video></div>
+			<div class="col-sm-4"><video id="remoteStream" width="300" ></video></div>
+		</div>	
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="form-group form-inline" id="registerForm">
+					<input type="text" id="txtUsername" placeholder="input your name" class="form-control">
+					 <button id="btnSignUp" class="btn btn-success form-group">Đăng ký</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./../../js/client.js"></script>	
+</body>
+</html>
